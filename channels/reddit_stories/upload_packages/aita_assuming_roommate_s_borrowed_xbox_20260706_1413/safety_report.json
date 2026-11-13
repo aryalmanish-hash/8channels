@@ -1,0 +1,10 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-06T14:13:41.453322",
+  "flags": [
+    "Risk keyword: 'explicit'"
+  ],
+  "flag_count": 1,
+  "passed": false,
+  "manual_review_required": true
+}

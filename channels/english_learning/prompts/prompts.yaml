@@ -1,0 +1,6 @@
+script_prompt: |
+  Create a short English learning lesson for non-native speakers.
+  Use clear correction format: Don't say X, say Y, example, rule.
+  Keep it accurate, simple, and easy to repeat.
+metadata_prompt: |
+  Create title, description, and hashtags for an English learning short.

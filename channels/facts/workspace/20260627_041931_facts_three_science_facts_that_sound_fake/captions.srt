@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:03,800
+Topic: Three science facts that sound fake
+
+2
+00:00:03,800 --> 00:00:07,600
+Here are three facts that sound surprising.
+
+3
+00:00:07,600 --> 00:00:11,400
+Fact one: the natural world often works in ways that feel impossible at first.
+
+4
+00:00:11,400 --> 00:00:15,200
+Fact two: many common things around us have hidden science behind them.
+
+5
+00:00:15,200 --> 00:00:19,000
+Fact three: the more you learn, the more ordinary things become interesting.
+
+6
+00:00:19,000 --> 00:00:22,800
+The lesson is simple.
+
+7
+00:00:22,800 --> 00:00:26,600
+Facts are powerful when they make people look at normal life differently.
+
+8
+00:00:26,600 --> 00:00:30,400
+Always verify facts with reliable sources before publishing.

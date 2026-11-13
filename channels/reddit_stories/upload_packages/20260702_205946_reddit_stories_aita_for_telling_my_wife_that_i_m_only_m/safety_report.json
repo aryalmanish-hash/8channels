@@ -1,0 +1,11 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-02T20:59:52.109860",
+  "flags": [
+    "AI flagged: Potential hate speech or discriminatory content. The statement 'I was just enjoying the benefits of being with a beautiful woman, free of charge' could be perceived as objectifying and reducing Rachel to her physical appearance rather than valuing her as an individual.",
+    "AI flagged: Content may be deemed insensitive or triggering, especially for audiences who have experienced financial difficulties or relationship issues related to class differences. The frank acknowledgment of using Rachel's potential wealth for personal gain may be hurtful or disturbing to some viewers."
+  ],
+  "flag_count": 2,
+  "passed": false,
+  "manual_review_required": true
+}

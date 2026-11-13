@@ -1,0 +1,18 @@
+channel_id: quiz
+channel_name: "Quiz / Brain Challenge"
+automation_level: very_high
+video_types:
+  - grammar_quiz
+  - general_knowledge
+  - geography_quiz
+  - history_quiz
+  - brain_teaser
+style:
+  voice: energetic_optional
+  layout: question_timer_answer
+manual_review:
+  required: true
+  checks:
+    - answer_correct
+    - timer_readable
+    - question_clear

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Upload - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Upload Tracker</h1>
+<p class="muted">{{ videos|length }} videos available. Mark each platform as you post.</p>
+
+{% if videos|length == 0 %}
+<div class="empty">No videos to upload yet.</div>
+{% endif %}
+
+<div class="upload-list">
+  {% for v in videos %}
+  <div class="upload-card" style="border-left: 4px solid {{ v.color }}">
+
+    <div class="upload-thumb">
+      {% if v.thumb_path %}
+      <img src="/file/{{ v.thumb_path }}" alt="thumb">
+      {% else %}
+      <div class="thumb-mini">No Thumb</div>
+      {% endif %}
+    </div>
+
+    <div class="upload-info">
+      <div class="upload-channel" style="color: {{ v.color }}">{{ v.channel_id }}</div>
+      <div class="upload-title">{{ v.title[:120] }}</div>
+      <div class="upload-meta muted">{{ v.created[:19] }} - {{ v.video_id[:30] }}...</div>
+      <div style="margin-top: 8px;">
+        <span class="badge badge-{{ v.status }}">{{ v.status }}</span>
+        {% if v.video_path %}
+        <a href="/file/{{ v.video_path }}" target="_blank" class="btn btn-grey small-btn">Watch</a>
+        {% endif %}
+        <button class="btn btn-grey small-btn" onclick="uploadDrive('{{ v.video_id }}')">Upload to Drive</button>
+      </div>
+    </div>
+
+    <div class="platforms-row">
+      {% for p in platforms %}
+      {% set posted = v.platforms.get(p, False) %}
+      <button
+        class="platform-btn {% if posted %}posted{% endif %}"
+        onclick="togglePosted('{{ v.video_id }}', '{{ p }}', this)"
+        data-video="{{ v.video_id }}"
+        data-platform="{{ p }}"
+      >
+        <span class="dot"></span>
+        {{ p.replace("_", " ").title() }}
+      </button>
+      {% endfor %}
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function togglePosted(videoId, platform, btn) {
+  const isPosted = btn.classList.contains("posted");
+  const newPosted = !isPosted;
+  fetch("/api/mark_posted", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({video_id: videoId, platform: platform, posted: newPosted})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) {
+      btn.classList.toggle("posted");
+      toast(newPosted ? "Marked posted" : "Unmarked", "ok");
+    } else {
+      toast("Error: " + (d.error || "unknown"), "err");
+    }
+  });
+}
+
+function uploadDrive(videoId) {
+  toast("Uploading to Drive... please wait", "warn");
+  fetch("/api/drive_upload", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({video_id: videoId})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) toast("Uploaded to Drive!", "ok");
+    else toast("Drive error: " + (d.error || "unknown"), "err");
+  });
+}
+</script>
+{% endblock %}

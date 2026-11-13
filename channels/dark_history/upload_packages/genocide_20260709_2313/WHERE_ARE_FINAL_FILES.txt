@@ -1,0 +1,5 @@
+Final clip:
+channels/dark_history/output/final_clips/genocide_20260709_2313.mp4
+
+Thumbnail:
+channels/dark_history/output/thumbnails/genocide_20260709_2313.png

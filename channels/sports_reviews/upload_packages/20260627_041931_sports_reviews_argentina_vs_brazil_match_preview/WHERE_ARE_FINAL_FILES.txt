@@ -1,0 +1,5 @@
+Final clip:
+channels/sports_reviews/output/final_clips/20260627_041931_sports_reviews_argentina_vs_brazil_match_preview.mp4
+
+Thumbnail:
+channels/sports_reviews/output/thumbnails/20260627_041931_sports_reviews_argentina_vs_brazil_match_preview.png

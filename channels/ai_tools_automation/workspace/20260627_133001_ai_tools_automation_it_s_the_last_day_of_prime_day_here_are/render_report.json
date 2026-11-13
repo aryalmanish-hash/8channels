@@ -1,0 +1,16 @@
+{
+  "video_id": "20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are",
+  "workspace_folder": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are",
+  "voice_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are\\voice.wav",
+  "captions_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are\\captions.srt",
+  "workspace_final_video_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are\\final.mp4",
+  "workspace_thumbnail_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are\\thumbnail.png",
+  "published_final_video_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\output\\final_clips\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are.mp4",
+  "published_thumbnail_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\output\\thumbnails\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are.png",
+  "duration": 73.2,
+  "voice_mode": "pyttsx3",
+  "rendered": true,
+  "thumbnail_created": true,
+  "upload_package": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\upload_packages\\20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are",
+  "status": "needs_review"
+}

@@ -1,0 +1,353 @@
+Python
+
+"""
+apply_fixes.py
+Update handover documentation with complete project state.
+"""
+
+import os
+from datetime import datetime
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+DOC_DIR = os.path.join(BASE, "DOCUMENTATION")
+
+
+def write_handover():
+    path = os.path.join(DOC_DIR, "01_LIVE_HANDOVER_PASTE_TO_AI.md")
+    
+    content = f"""# 01 — Live Handover / Paste To Another AI
+
+Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+
+Paste this file to another AI assistant if this project needs to continue elsewhere.
+
+---
+
+## Project Identity
+
+```text
+8_Channel_Content_Factory
+Location: C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory
+
+The user has a separate working system called WC Klips — DO NOT TOUCH IT.
+
+This project is a semi-automated faceless content factory for 8 channels.
+User Preferences (CRITICAL)
+
+text
+
+1. User is NOT highly technical
+2. ALWAYS give commands with full directory path on separate lines
+3. ALWAYS put 4 lines of "=" (80 chars) at very end of script output:
+   ================================================================================
+   ================================================================================
+   ================================================================================
+   ================================================================================
+4. Do small targeted patches via apply_fixes.py — never rewrite full files for small bugs
+5. Do not give very long code at once — user has low-end PC
+6. Test after each change
+7. Use web/AI for everything — NO hardcoded content
+8. User prefers free tools/APIs
+9. Generate → post → delete workflow (storage is limited)
+
+Working Method
+
+text
+
+ALL code changes go through: apply_fixes.py
+Location: C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\apply_fixes.py
+
+Pattern:
+1. AI writes apply_fixes.py
+2. User saves it
+3. User runs: python apply_fixes.py
+4. apply_fixes.py creates backup automatically
+5. apply_fixes.py applies targeted patches
+6. User runs test command
+7. User pastes output
+
+Backup System
+
+text
+
+Location: C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\BACKUPS\\
+Format:   backup_YYYY-MM-DD_HH-MM-SS.zip
+Keeps:    Last 10 backups only (auto-rotation)
+Created:  Automatically on every apply_fixes.py run
+
+All API Keys (Stored in config/global_settings.yaml)
+
+text
+
+groq_api_key:    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
+GEMINI_API_KEY: YOUR_GCP_GEMINI_API_KEY
+pexels_api_key:  JT1GlkAaxxiR69tbNNtAkF5tPZAaTD3jIcbKRjMdMb5ARsWkClFTWZ7R
+github_token:    YOUR_GITHUB_PAT
+
+NOTE: User should rotate these keys when system is stable.
+Installed Python Packages (Verified Working)
+
+text
+
+flask, pyyaml, pillow, pyttsx3, ffmpeg (system binary)
+requests, beautifulsoup4, feedparser
+groq, google-genai
+moviepy, opencv-python, numpy, faster-whisper
+edge-tts, yt-dlp, soundfile, librosa
+
+The 8 Channels
+
+text
+
+1. reddit_stories       — AI-generated AITA dramas
+2. english_learning     — Grammar, vocabulary, IELTS tips
+3. psychology           — Behavior, mindset, relationships
+4. dark_history         — Mysteries, wars, dark events
+5. ai_tools_automation  — AI tools from GitHub + RSS
+6. quiz                 — Trivia from Wikipedia + RSS
+7. facts                — Science facts from Wikipedia + RSS
+8. sports_reviews       — Football focus, World Cup 2026
+
+Folder Structure
+
+text
+
+8_Channel_Content_Factory/
+├── apply_fixes.py              ← all patches go through this
+├── main.py                     ← CLI (needs upgrade)
+├── dashboard_app.py            ← Flask dashboard (needs upgrade)
+├── CHECK_SETUP.py
+├── TEST_SYSTEM.py
+├── requirements.pip
+├── *.bat                       ← Windows launchers
+│
+├── BACKUPS/                    ← auto-backups (last 10)
+├── DOCUMENTATION/
+│   ├── 00_GOALS_AND_REQUIREMENTS.md
+│   ├── 01_LIVE_HANDOVER_PASTE_TO_AI.md  ← THIS FILE
+│   ├── 02_LOCAL_SETUP_GUIDE.md
+│   ├── 03_HOW_TO_USE_CURRENT_SYSTEM.md
+│   ├── 04_TECHNICAL_REFERENCE.md
+│   ├── 05_WHAT_IS_DONE_AND_NOT_DONE.md
+│   ├── 06_CONTINUE_FROM_HERE.md
+│   └── 07_COMMON_SYSTEM_COMPLETED.md
+│
+├── config/
+│   ├── global_settings.yaml    ← API keys live here
+│   └── channels/               ← 8 yaml files
+│
+├── core/                       ← MAIN ENGINE
+│   ├── ai_engine.py            ← Groq + Gemini fallback
+│   ├── ai_validator.py         ← script quality validator
+│   ├── backup_manager.py
+│   ├── background_manager.py   ← Pexels video downloader
+│   ├── bootstrap.py
+│   ├── caption_generator.py    ← faster-whisper synced SRT
+│   ├── caption_renderer.py     ← kinetic captions with PIL
+│   ├── channel_styles.py
+│   ├── compositor.py           ← moviepy video assembler
+│   ├── config_loader.py
+│   ├── database.py             ← SQLite
+│   ├── folder_manager.py
+│   ├── metadata_generator.py   ← AI per-platform metadata
+│   ├── output_index.py
+│   ├── overlay_engine.py       ← Reddit UI, watermark, CTA
+│   ├── posting_tracker.py
+│   ├── renderer.py             ← FFmpeg fallback renderer
+│   ├── review_manager.py
+│   ├── safety_checker.py       ← keyword + AI safety
+│   ├── scraper.py              ← RSS + Wikipedia + GitHub
+│   ├── script_generator.py     ← AI-first script generation
+│   ├── source_builder.py       ← normalizes scraped data
+│   ├── status_manager.py
+│   ├── story_generator.py      ← AI Reddit story (AITA)
+│   ├── system_checks.py
+│   ├── thumbnail_generator.py  ← needs AI upgrade
+│   ├── topic_manager.py        ← live web topics
+│   ├── upload_package.py
+│   ├── voice_generator.py      ← edge-tts + pyttsx3 fallback
+│   └── workflow.py             ← orchestrates full pipeline
+│
+├── channels/
+│   ├── OPEN_CHANNEL_OUTPUTS.html
+│   └── <channel_id>/
+│       ├── assets/
+│       ├── prompts/            ← empty, prompts.yaml needed
+│       ├── templates/
+│       ├── output/
+│       │   ├── final_clips/    ← final MP4s only
+│       │   └── thumbnails/     ← thumbnail PNGs only
+│       ├── workspace/<video_id>/   ← all working files
+│       └── upload_packages/<video_id>/  ← ready-to-upload
+│
+├── assets/
+│   ├── backgrounds/
+│   │   ├── gameplay/           ← Pexels gameplay clips
+│   │   ├── satisfying/         ← Pexels satisfying clips
+│   │   └── (other categories)
+│   └── icons/                  ← Twemoji PNG icons
+│       ├── upvote.png
+│       ├── downvote.png
+│       ├── comment.png
+│       ├── share.png
+│       ├── award.png
+│       ├── fire.png, heart.png, laugh.png
+│       ├── shock.png, cry.png
+│
+└── database/
+    └── content_factory.sqlite
+
+What Is FULLY Working
+
+text
+
+✅ Web scraping engine (RSS, Wikipedia, GitHub API)
+✅ Content filtering per channel (rejects off-topic results)
+✅ AI script generation (Groq llama-3.1-8b-instant + Gemini fallback)
+✅ AI script validation & auto-rewrite if quality < 50
+✅ AI metadata per platform (unique titles/captions/hashtags)
+✅ AI safety checker (keyword + AI review)
+✅ edge-tts natural voice (David/Aria/Guy/etc)
+✅ Male/female narrator detection from script
+✅ faster-whisper SRT generation (synced from real audio)
+✅ Pexels background video download (no looping, duration check)
+✅ Background categories per channel (satisfying, gameplay, etc)
+✅ moviepy compositor (background + captions + audio)
+✅ Transparent caption overlay with Pillow alpha masks
+✅ Emotion word highlighting (yellow on white)
+✅ Reddit-style AI story generation
+✅ Overlay engine (Reddit UI card, watermark, CTA)
+✅ Backup rotation (last 10 auto)
+✅ All 8 channel configs registered
+✅ SQLite database for video tracking
+
+What Is PARTIALLY Working
+
+text
+
+⚠️ Reddit UI overlay — design needs improvement
+   Current: basic white card
+   Target: Twitter-style white card with:
+   - Orange username bar (Reddit vibe)
+   - Real PNG icons (downloaded to assets/icons/)
+   - Reddit-style reactions
+   - Clean readable fonts (not blurred)
+   - Centered on screen
+   - Shows first 3-4 seconds then fades
+
+⚠️ Voice speed — set to +15% for reddit but feels slow
+⚠️ Caption sync — works but could be tighter
+⚠️ Background quality — only 3 clips downloaded, needs more variety
+
+What Is NOT Built Yet
+
+text
+
+❌ AI thumbnail generation (planned: Pollinations.ai)
+❌ Background music layer (planned: Pixabay free music)
+❌ Part system mechanism (multi-part stories)
+❌ Emotional/SSML voice (tested but edge-tts reads tags literally)
+❌ CLI full workflow (currently outdated — only shows 3 MVP channels)
+❌ Dashboard full workflow (basic version exists)
+❌ Channel prompts files (all 8 are empty)
+❌ Generate→post→delete cleanup automation
+
+Current Reddit Stories Channel Status
+
+text
+
+Working:
+✅ AI story generation
+✅ Female/male voice detection
+✅ edge-tts natural voice
+✅ Background video (gameplay/satisfying)
+✅ Synced captions with emotion highlighting
+✅ Transparent caption overlay
+✅ AI metadata per platform
+✅ Reddit UI overlay (basic, needs redesign)
+
+Needs Fixing Now:
+- Reddit UI overlay design (Twitter-style white card with orange username bar)
+- Use real PNG icons from assets/icons/
+- Less bold/clearer fonts
+- Better Reddit reactions
+
+Voice Settings (Per Channel)
+
+Python
+
+CHANNEL_VOICES = {{
+    "reddit_stories":      "en-US-GuyNeural"    rate +15%  male
+    "english_learning":    "en-US-JennyNeural"  rate +0%   female
+    "psychology":          "en-US-AriaNeural"   rate -5%   female
+    "dark_history":        "en-GB-RyanNeural"   rate -5%   male
+    "ai_tools_automation": "en-US-AndrewNeural" rate +5%   male
+    "quiz":                "en-US-EmmaNeural"   rate +5%   female
+    "facts":               "en-US-SteffanNeural" rate +0%  male
+    "sports_reviews":      "en-GB-ThomasNeural" rate +5%   male
+}}
+
+System auto-detects narrator gender from script and picks matching voice.
+Roadmap / Priority Order
+
+text
+
+PHASE 1 — Finish Reddit Stories Channel:
+1. Fix Reddit UI overlay design (white + orange + real icons)
+2. AI thumbnail generation (Pollinations.ai)
+3. Tighter story length (50-70 sec)
+4. Background music layer
+5. Part system mechanism
+6. CLI workflow for reddit
+7. Dashboard workflow for reddit
+
+PHASE 2 — Apply To Other 7 Channels:
+Same engine, different prompts/configs per channel.
+
+PHASE 3 — Polish:
+- More background variety
+- Better thumbnails per channel
+- Story quality improvements
+- Performance optimization
+
+How To Test Current System
+
+cmd
+
+cd C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory
+python core\\bootstrap.py
+python -c "from core.workflow import create_channel_batch; r = create_channel_batch('reddit_stories', 1); print('DONE:', r[0][0])"
+
+Common Test Commands
+
+cmd
+
+# Test AI engine
+python -c "from core.ai_engine import ask_ai; print(ask_ai('test')[:200])"
+
+# Test web scraping
+python -c "from core.topic_manager import get_topic_ideas; print(get_topic_ideas('facts', 3))"
+
+# Test voice
+python -c "from core.voice_generator import generate_voice; from pathlib import Path; d,m=generate_voice('Test', Path('test.wav'), channel_id='reddit_stories'); print(d, m)"
+
+# Test full reddit video
+python -c "from core.workflow import create_channel_batch; r = create_channel_batch('reddit_stories', 1); print('DONE:', r[0][0])"
+
+# Generate one video for specific channel
+python -c "from core.workflow import create_full_mvp_video; vid, f = create_full_mvp_video('CHANNEL_ID', 'default', 'TOPIC HERE'); print(vid)"
+
+Critical Rules For Any AI Continuing This Project
+
+text
+
+1. DO NOT touch WC Klips project
+2. DO NOT create docs outside DOCUMENTATION/
+3. DO NOT duplicate handover files
+4. DO NOT rewrite full files for small bugs — use targeted patches
+5. ALWAYS create backup before changes (apply_fixes.py handles this)
+6. ALWAYS test after every change
+7. ALWAYS give commands with full directory path on separate lines
+8. ALWAYS put 4 lines of "=" (80 chars) at end of script output
+9. NO hardcoded content — use AI/web scraping for everything
+10. Manual review before upload 

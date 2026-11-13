@@ -1,0 +1,12 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-06T15:22:43.276322",
+  "flags": [
+    "AI flagged: Content inappropriate for general audience (the script discusses relationship drama and infidelity, which may not be suitable for all ages)",
+    "AI flagged: Legal risks (the script mentions kicking a roommate out, which could lead to discussions about landlord-tenant laws and potential legal repercussions)",
+    "AI flagged: Potential for hate speech or discrimination (depending on how the situation is discussed in the video, there could be a risk of sexist or misogynistic comments)"
+  ],
+  "flag_count": 3,
+  "passed": false,
+  "manual_review_required": true
+}

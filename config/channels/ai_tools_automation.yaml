@@ -1,0 +1,20 @@
+channel_id: ai_tools_automation
+channel_name: "AI Tools + Automation"
+automation_level: medium
+video_types:
+  - ai_tool_demo
+  - free_website_demo
+  - productivity_tool
+  - automation_tutorial
+  - google_sheets_workflow
+  - no_code_workflow
+style:
+  voice: optional_clear_explainer
+  layout: screen_recording_with_captions
+manual_review:
+  required: true
+  checks:
+    - tool_tested
+    - tutorial_works
+    - no_fake_claims
+    - screen_recording_clear

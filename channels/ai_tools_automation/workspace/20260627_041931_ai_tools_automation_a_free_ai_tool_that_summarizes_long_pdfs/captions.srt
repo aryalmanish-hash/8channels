@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:04,666
+Topic: A free AI tool that summarizes long PDFs
+
+2
+00:00:04,666 --> 00:00:09,333
+Here is a useful free-tool workflow to save time.
+
+3
+00:00:09,333 --> 00:00:14,000
+First, open the tool or website and start with one simple task.
+
+4
+00:00:14,000 --> 00:00:18,666
+Do not try to use every feature at once.
+
+5
+00:00:18,666 --> 00:00:23,333
+For example, if the tool summarizes PDFs, upload one document and check whether the summary is accurate.
+
+6
+00:00:23,333 --> 00:00:28,000
+Then copy the result into your notes, content plan, or study document.
+
+7
+00:00:28,000 --> 00:00:32,666
+The best tools are not the ones with the most features.
+
+8
+00:00:32,666 --> 00:00:37,333
+The best tools are the ones that solve one real problem quickly.
+
+9
+00:00:37,333 --> 00:00:42,000
+Before recommending any tool, test it yourself and check whether it is still free.

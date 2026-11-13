@@ -1,0 +1,5 @@
+Final clip:
+channels/ai_tools_automation/output/final_clips/20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are.mp4
+
+Thumbnail:
+channels/ai_tools_automation/output/thumbnails/20260627_133001_ai_tools_automation_it_s_the_last_day_of_prime_day_here_are.png

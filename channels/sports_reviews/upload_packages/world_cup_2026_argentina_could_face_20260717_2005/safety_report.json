@@ -1,0 +1,12 @@
+{
+  "channel_id": "sports_reviews",
+  "checked_at": "2026-07-17T20:05:54.859892",
+  "flags": [
+    "AI flagged: 1. While the script does not contain direct hate speech or discrimination, the provocative display of the Falkland Islands banner can be perceived as insensitive and potentially hurtful towards those affiliated with the UK.",
+    "AI flagged: 3. The script mentions a topic that can be sensitive for general audiences due to its historical controversy and potential regional loyalties.",
+    "AI flagged: 4. The script implies that Argentina is at risk of facing disciplinary action, but it does not explicitly verify the information with an official source, which could be perceived as misinformation. It's essential to ensure that any references to potential disciplinary actions come from a verified source to prevent unintended misinformation."
+  ],
+  "flag_count": 3,
+  "passed": false,
+  "manual_review_required": true
+}

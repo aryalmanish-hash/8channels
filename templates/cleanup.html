@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Cleanup - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Cleanup Storage</h1>
+<p class="muted">Total workspace storage: <strong>{{ total_size }}</strong></p>
+
+<div class="channel-grid">
+  {% for c in channels %}
+  <div class="channel-card" style="border-left: 4px solid {{ c.color }}">
+    <div class="channel-name">{{ c.name }}</div>
+    <div class="channel-id muted">{{ c.id }}</div>
+    <div style="margin-top: 8px;"><strong>{{ c.size }}</strong></div>
+    <div style="margin-top: 8px; display: flex; gap: 6px; align-items: center;">
+      <select id="keep-{{ c.id }}" class="select-small">
+        <option value="1">Keep 1</option>
+        <option value="3" selected>Keep 3</option>
+        <option value="5">Keep 5</option>
+        <option value="10">Keep 10</option>
+      </select>
+      <button class="btn btn-red" onclick="cleanupChannel('{{ c.id }}')">Clean Old</button>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function cleanupChannel(channelId) {
+  const keep = parseInt(document.getElementById("keep-" + channelId).value);
+  if (!confirm("Delete old workspaces for " + channelId + " (keep " + keep + " most recent)?")) return;
+  fetch("/api/cleanup_channel", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({channel_id: channelId, keep: keep})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) {
+      toast("Deleted " + d.deleted + " - freed " + d.freed, "ok");
+      setTimeout(() => location.reload(), 1500);
+    } else {
+      toast("Error: " + d.error, "err");
+    }
+  });
+}
+</script>
+{% endblock %}

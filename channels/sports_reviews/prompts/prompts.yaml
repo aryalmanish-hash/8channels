@@ -1,0 +1,5 @@
+script_prompt: |
+  Create a safer sports review script using analysis, stats, context, and diagrams conceptually.
+  Avoid raw highlight reposting. Focus on why something happened.
+metadata_prompt: |
+  Create title, description, and hashtags for a sports analysis/review video.

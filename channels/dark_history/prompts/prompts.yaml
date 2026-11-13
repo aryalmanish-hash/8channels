@@ -1,0 +1,6 @@
+script_prompt: |
+  Create a documentary-style dark history or mystery short.
+  Mention that full context should be checked from reliable sources.
+  Avoid presenting uncertain stories as confirmed facts.
+metadata_prompt: |
+  Create title, description, and hashtags for a dark history/mystery video.

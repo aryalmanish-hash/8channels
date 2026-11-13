@@ -1,0 +1,10 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-01T17:16:57.300663",
+  "flags": [
+    "AI flagged: The script makes a general statement about Alex's claims regarding Sunny's emotional support animal status and anxiety. However, it doesn't provide explicit information about making hate speech or discrimination. Yet it could be argued that the video leans on stereotypes of people with mental health issues or owning exotic animals, which might be a concern."
+  ],
+  "flag_count": 1,
+  "passed": false,
+  "manual_review_required": true
+}

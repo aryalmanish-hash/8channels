@@ -1,0 +1,21 @@
+channel_id: sports_reviews
+channel_name: "Sports Type 3 + Safer Highlight Review"
+automation_level: medium_high
+video_types:
+  - match_preview
+  - match_review
+  - team_comparison
+  - player_comparison
+  - stats_video
+  - tactical_breakdown
+  - safer_highlight_review
+style:
+  voice: sports_analyst
+  layout: stats_graphics_diagrams
+manual_review:
+  required: true
+  checks:
+    - stats_checked
+    - analysis_original
+    - not_raw_highlight_repost
+    - sources_noted

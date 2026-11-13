@@ -1,0 +1,5 @@
+Final clip:
+channels/quiz/output/final_clips/20260627_041931_quiz_which_english_sentence_is_correct.mp4
+
+Thumbnail:
+channels/quiz/output/thumbnails/20260627_041931_quiz_which_english_sentence_is_correct.png

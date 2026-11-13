@@ -1,0 +1,14 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-07T18:03:13.484219",
+  "flags": [
+    "Risk keyword: 'explicit'",
+    "AI flagged: The video script may contain ableism or stigma towards mental health conditions, specifically anxiety issues, as the speaker questions the legitimacy of Rachel's emotional support animal.",
+    "AI flagged: The script implies that the speaker's roommate's emotional support animal (ESA) is not a genuine animal, which may be perceived as dismissive or invalidating of people with legitimate mental health needs.",
+    "AI flagged: The content is generally suitable for a general audience, but it may be triggering for individuals who struggle with anxiety or have experienced stigma related to mental health conditions.",
+    "AI flagged: From a legal perspective, the script does not explicitly state the roommate's actions or the speaker's concerns regarding the ESA. However, to avoid any potential legal risks, it would be advisable to have the roommate provide a legitimate ESA documentation (e.g., a letter from a licensed healthcare provider) for a pet animal that may be considered a service animal."
+  ],
+  "flag_count": 5,
+  "passed": false,
+  "manual_review_required": true
+}

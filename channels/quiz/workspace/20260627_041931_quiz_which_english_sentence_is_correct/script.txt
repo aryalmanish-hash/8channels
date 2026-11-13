@@ -1,0 +1,17 @@
+Quiz Topic: Which English sentence is correct?
+
+Question:
+Which sentence is correct?
+
+A. I am agree with you.
+B. I agree with you.
+C. I am agreed with you.
+
+Countdown:
+5... 4... 3... 2... 1...
+
+Answer:
+B. I agree with you.
+
+Explanation:
+Agree is a verb, so you do not need am before it.

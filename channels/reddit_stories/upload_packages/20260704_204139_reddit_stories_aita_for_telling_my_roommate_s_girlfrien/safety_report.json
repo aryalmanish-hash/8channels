@@ -1,0 +1,13 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-04T20:41:43.336779",
+  "flags": [
+    "AI flagged: There is no explicit hate speech or discrimination in the script, but the narrative raises some questions about Alex's behavior, particularly in regards to an age gap between him and Emma.",
+    "AI flagged: The script does not contain any misinformation or dangerous claims. However, it implies that Alex may have been hiding his relationship from his current partner, which could be hurtful or damaging to others.",
+    "AI flagged: The script may not be entirely suitable for a general audience due to its potentially sensitive and mature themes, such as infidelity and deception.",
+    "AI flagged: The script does not pose any significant legal risks as it appears to be a personal narrative about a situation rather than an instruction or promotion of any illicit activity."
+  ],
+  "flag_count": 4,
+  "passed": false,
+  "manual_review_required": true
+}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Channels - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Channels - Generate New Videos</h1>
+<p class="muted">Click Generate to launch the pipeline. A new CMD window will open.</p>
+
+<div class="channel-grid">
+  {% for c in channels %}
+  <div class="channel-card" style="border-left: 4px solid {{ c.color }}">
+    <div class="channel-name">{{ c.name }}</div>
+    <div class="channel-id muted">{{ c.id }}</div>
+    <div style="margin-top: 12px; display: flex; gap: 6px; align-items: center;">
+      <select id="limit-{{ c.id }}" class="select-small">
+        <option value="1">1 video</option>
+        <option value="2">2 videos</option>
+        <option value="3">3 videos</option>
+        <option value="5">5 videos</option>
+      </select>
+      <button class="btn btn-blue" onclick="generateBatch('{{ c.id }}')">Generate</button>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function generateBatch(channelId) {
+  const sel = document.getElementById("limit-" + channelId);
+  const limit = parseInt(sel.value);
+  fetch("/api/generate", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({channel_id: channelId, limit: limit})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) toast("Launched - watch CMD window!", "ok");
+    else toast("Error: " + (d.error || "unknown"), "err");
+  })
+  .catch(e => toast("Network error", "err"));
+}
+</script>
+{% endblock %}

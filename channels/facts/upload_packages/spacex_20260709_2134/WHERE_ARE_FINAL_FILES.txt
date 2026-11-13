@@ -1,0 +1,5 @@
+Final clip:
+channels/facts/output/final_clips/spacex_20260709_2134.mp4
+
+Thumbnail:
+channels/facts/output/thumbnails/spacex_20260709_2134.png

@@ -1,0 +1,16 @@
+{
+  "video_id": "20260627_042819_quiz_system_test_quiz",
+  "workspace_folder": "/home/user/8_Channel_Content_Factory/channels/quiz/workspace/20260627_042819_quiz_system_test_quiz",
+  "voice_path": "/home/user/8_Channel_Content_Factory/channels/quiz/workspace/20260627_042819_quiz_system_test_quiz/voice.wav",
+  "captions_path": "/home/user/8_Channel_Content_Factory/channels/quiz/workspace/20260627_042819_quiz_system_test_quiz/captions.srt",
+  "workspace_final_video_path": "",
+  "workspace_thumbnail_path": "/home/user/8_Channel_Content_Factory/channels/quiz/workspace/20260627_042819_quiz_system_test_quiz/thumbnail.png",
+  "published_final_video_path": "",
+  "published_thumbnail_path": "/home/user/8_Channel_Content_Factory/channels/quiz/output/thumbnails/20260627_042819_quiz_system_test_quiz.png",
+  "duration": 20.8,
+  "voice_mode": "silent_placeholder",
+  "rendered": false,
+  "thumbnail_created": true,
+  "upload_package": "/home/user/8_Channel_Content_Factory/channels/quiz/upload_packages/20260627_042819_quiz_system_test_quiz",
+  "status": "needs_edit"
+}

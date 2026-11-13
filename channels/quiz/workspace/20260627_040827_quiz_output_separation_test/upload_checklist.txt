@@ -1,0 +1,23 @@
+UPLOAD CHECKLIST
+
+Before upload:
+[ ] Watch final video fully
+[ ] Check audio
+[ ] Check captions
+[ ] Check title and hashtags
+[ ] Check thumbnail
+
+Platforms:
+[ ] Upload to youtube_shorts
+[ ] Mark youtube_shorts posted in dashboard
+[ ] Upload to tiktok
+[ ] Mark tiktok posted in dashboard
+[ ] Upload to instagram_reels
+[ ] Mark instagram_reels posted in dashboard
+[ ] Upload to facebook_reels
+[ ] Mark facebook_reels posted in dashboard
+
+Files to use:
+- final.mp4
+- thumbnail.png
+- metadata.txt

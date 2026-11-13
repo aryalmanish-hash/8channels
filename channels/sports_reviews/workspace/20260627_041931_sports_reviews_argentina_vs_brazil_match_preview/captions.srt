@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:03,399
+Topic: Argentina vs Brazil match preview
+
+2
+00:00:03,399 --> 00:00:06,799
+This is a safer sports review format.
+
+3
+00:00:06,799 --> 00:00:10,199
+Instead of reposting raw highlights, focus on what changed the match.
+
+4
+00:00:10,199 --> 00:00:13,599
+Look at three things: momentum, tactics, and key decisions.
+
+5
+00:00:13,599 --> 00:00:17,000
+First, momentum shifted when one team started controlling the middle of the field.
+
+6
+00:00:17,000 --> 00:00:20,399
+Second, the defensive shape created space in dangerous areas.
+
+7
+00:00:20,399 --> 00:00:23,799
+Third, one key decision forced the opponent to adjust.
+
+8
+00:00:23,799 --> 00:00:27,199
+That is why stats and context matter.
+
+9
+00:00:27,199 --> 00:00:30,599
+A good review does not just show what happened.
+
+10
+00:00:30,599 --> 00:00:33,999
+It explains why it happened.

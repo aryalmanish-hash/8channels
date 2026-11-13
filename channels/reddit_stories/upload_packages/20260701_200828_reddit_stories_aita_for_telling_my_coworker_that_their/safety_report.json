@@ -1,0 +1,13 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-01T20:08:32.198171",
+  "flags": [
+    "AI flagged: Content may be perceived as mildly complaining or negative towards a coworker, but it does not cross the line into hate speech or discrimination.",
+    "AI flagged: The script does not contain any misinformation or dangerous claims.",
+    "AI flagged: The language used is suitable for a general audience, but some viewers might find the topic or tone slightly annoying or relatable in a negative way.",
+    "AI flagged: There is a minor legal risk of the coworker, Rachel, potentially taking offense if she were to see the video, but the script does not contain any defamatory or explicitly harmful statements."
+  ],
+  "flag_count": 4,
+  "passed": false,
+  "manual_review_required": true
+}

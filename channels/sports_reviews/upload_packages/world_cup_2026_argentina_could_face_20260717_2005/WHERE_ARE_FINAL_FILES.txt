@@ -1,0 +1,5 @@
+Final clip:
+channels/sports_reviews/output/final_clips/world_cup_2026_argentina_could_face_20260717_2005.mp4
+
+Thumbnail:
+channels/sports_reviews/output/thumbnails/world_cup_2026_argentina_could_face_20260717_2005.png

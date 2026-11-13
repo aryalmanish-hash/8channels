@@ -1,0 +1,17 @@
+channel_id: dark_history
+channel_name: "Dark History / Mystery"
+automation_level: medium_high
+video_types:
+  - mystery_story
+  - forgotten_disaster
+  - strange_history
+  - unsolved_event
+style:
+  voice: documentary_dark
+  layout: archival_pan_zoom
+manual_review:
+  required: true
+  checks:
+    - facts_checked
+    - visuals_allowed
+    - not_fake_history

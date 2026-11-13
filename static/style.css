@@ -1,0 +1,369 @@
+/* 8-Channel Content Factory Dashboard Theme */
+:root {
+  --bg:       #0f0f1a;
+  --card:     #1a1a2e;
+  --card-2:   #232338;
+  --accent:   #e94560;
+  --blue:     #3b82f6;
+  --green:    #10b981;
+  --yellow:   #f59e0b;
+  --red:      #ef4444;
+  --purple:   #7c3aed;
+  --text:     #e0e0e0;
+  --muted:    #6b7280;
+  --border:   #2a2a3e;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── Topbar ─────────────────────────────────────────────────────────── */
+.topbar {
+  background: var(--card);
+  padding: 12px 20px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo {
+  background: var(--accent);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+.brand-name { font-weight: 700; font-size: 16px; }
+
+/* ── Tabs ───────────────────────────────────────────────────────────── */
+.tabs {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 60px;
+  z-index: 99;
+}
+.tab {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab:hover { color: var(--text); }
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Container ──────────────────────────────────────────────────────── */
+.container { padding: 18px 24px; max-width: 1400px; margin: 0 auto; }
+h1 { font-size: 22px; margin-bottom: 16px; }
+h2 { font-size: 18px; margin: 24px 0 12px; color: #cbd5e1; }
+.muted  { color: var(--muted); font-size: 12px; }
+.small  { font-size: 11px; }
+.warn   { color: var(--yellow); }
+.ok     { color: var(--green); }
+.err    { color: var(--red); }
+
+/* ── Stats Row ──────────────────────────────────────────────────────── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+.stat-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--blue);
+}
+.stat-card.warn { border-left-color: var(--yellow); }
+.stat-card.ok   { border-left-color: var(--green); }
+.stat-card.err  { border-left-color: var(--red); }
+.stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.stat-value { font-size: 28px; font-weight: 800; margin-top: 4px; }
+
+/* ── Channel Grid ───────────────────────────────────────────────────── */
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+.channel-card {
+  background: var(--card);
+  padding: 12px 14px;
+  border-radius: 8px;
+}
+.channel-name { font-weight: 700; font-size: 14px; }
+.channel-id { font-size: 11px; margin-bottom: 8px; }
+.channel-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 11px;
+}
+.channel-stats strong { color: var(--text); }
+
+/* ── Recent List ───────────────────────────────────────────────────── */
+.recent-list { display: flex; flex-direction: column; gap: 6px; }
+.recent-row {
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.recent-main { flex: 1; }
+.recent-title { font-weight: 600; font-size: 13px; }
+.recent-meta  { font-size: 11px; margin-top: 2px; }
+
+/* ── Badges ────────────────────────────────────────────────────────── */
+.badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--card-2);
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.badge-needs_review        { background: var(--yellow); color: black; }
+.badge-approved_for_upload { background: var(--blue);   color: white; }
+.badge-posted              { background: var(--green);  color: white; }
+.badge-rejected            { background: var(--red);    color: white; }
+.badge-script_generated    { background: var(--purple); color: white; }
+
+/* ── Review Grid ───────────────────────────────────────────────────── */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.review-card {
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.thumb-wrap {
+  background: #000;
+  aspect-ratio: 9 / 16;
+  max-height: 320px;
+  overflow: hidden;
+}
+.thumb { width: 100%; height: 100%; object-fit: cover; }
+.thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  height: 320px;
+}
+.review-info { padding: 10px 12px; }
+.review-channel { font-weight: 700; font-size: 12px; text-transform: uppercase; }
+.review-title { font-weight: 600; margin-top: 4px; font-size: 14px; }
+.review-meta  { margin-top: 4px; font-size: 11px; }
+.review-id    { margin-top: 2px; font-family: monospace; }
+.review-actions {
+  padding: 10px 12px 12px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────── */
+.btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-blue   { background: var(--blue); }
+.btn-green  { background: var(--green); }
+.btn-red    { background: var(--red); }
+.btn-grey   { background: var(--card-2); color: var(--text); }
+.btn:hover  { opacity: 0.85; }
+
+/* ── Empty State ───────────────────────────────────────────────────── */
+.empty {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ── Toast ─────────────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--green);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.25s;
+  pointer-events: none;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast.toast-err  { background: var(--red); }
+.toast.toast-warn { background: var(--yellow); color: black; }
+
+/* ── Mobile ────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .container { padding: 12px; }
+  .topbar    { padding: 10px 14px; }
+  .tab       { padding: 10px 12px; font-size: 12px; }
+  h1 { font-size: 18px; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .channel-grid { grid-template-columns: 1fr; }
+  .review-grid  { grid-template-columns: 1fr; }
+}
+
+
+/* ── Card Box ──────────────────────────────────────────────────────── */
+.card-box {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.card-box h2 { margin-top: 0; }
+.card-box ol, .card-box ul { padding-left: 22px; margin-top: 8px; color: #cbd5e1; }
+.card-box li { margin: 4px 0; }
+
+/* ── Inputs ────────────────────────────────────────────────────────── */
+.select-small, .input-small {
+  padding: 6px 10px;
+  background: var(--card-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: inherit;
+}
+.small-btn { padding: 4px 8px; font-size: 11px; }
+
+/* ── Upload Tab ────────────────────────────────────────────────────── */
+.upload-list { display: flex; flex-direction: column; gap: 10px; }
+.upload-card {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+.upload-thumb img { width: 90px; height: 160px; object-fit: cover; border-radius: 6px; }
+.thumb-mini {
+  width: 90px; height: 160px;
+  background: #000;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+  font-size: 10px; color: var(--muted);
+}
+.upload-channel { font-weight: 700; font-size: 11px; text-transform: uppercase; }
+.upload-title { font-weight: 600; margin-top: 4px; font-size: 13px; }
+.upload-meta { font-size: 11px; margin-top: 2px; }
+.platforms-row {
+  display: flex; flex-direction: column; gap: 6px;
+  min-width: 160px;
+}
+.platform-btn {
+  background: var(--card-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  text-align: left;
+}
+.platform-btn .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.platform-btn.posted {
+  background: var(--green); color: white; border-color: var(--green);
+}
+.platform-btn.posted .dot {
+  background: white;
+}
+
+/* ── History ───────────────────────────────────────────────────────── */
+.history-list { display: flex; flex-direction: column; gap: 4px; }
+.history-row {
+  background: var(--card);
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 150px 120px 1fr;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ── Schedule ──────────────────────────────────────────────────────── */
+.schedule-list { display: flex; flex-direction: column; gap: 6px; }
+.schedule-row {
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ── Mobile tweaks ─────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .upload-card { grid-template-columns: 70px 1fr; }
+  .upload-thumb img { width: 70px; height: 120px; }
+  .thumb-mini { width: 70px; height: 120px; }
+  .platforms-row { grid-column: 1 / -1; flex-direction: column; min-width: 0; }
+  .history-row, .schedule-row { grid-template-columns: 1fr; gap: 4px; }
+}

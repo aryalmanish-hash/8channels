@@ -1,0 +1,5 @@
+Final clip:
+channels/english_learning/output/final_clips/20260627_041931_english_learning_i_am_agree_vs_i_agree.mp4
+
+Thumbnail:
+channels/english_learning/output/thumbnails/20260627_041931_english_learning_i_am_agree_vs_i_agree.png

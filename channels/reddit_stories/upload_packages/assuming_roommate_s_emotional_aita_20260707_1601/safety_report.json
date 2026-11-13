@@ -1,0 +1,10 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-07T16:01:39.381964",
+  "flags": [
+    "AI flagged: 4. Legal risks - The script may imply that the host refused to accommodate the chicken's 'therapy' needs, which could potentially lead to a misunderstanding about the Fair Housing Act (FHA) or the Americans with Disabilities Act (ADA) regarding service animals and emotional support animals. This could lead to a complaint from the audience who might misinterpret the situation as a violation of these laws."
+  ],
+  "flag_count": 1,
+  "passed": false,
+  "manual_review_required": true
+}

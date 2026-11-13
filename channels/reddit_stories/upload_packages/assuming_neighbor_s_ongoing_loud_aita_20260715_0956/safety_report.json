@@ -1,0 +1,12 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-15T09:56:40.451725",
+  "flags": [
+    "AI flagged: The video script does not contain hate speech or discrimination, but the potential portrayal of mental health might be a concern for some viewers. There is no explicit mention of stigmatizing Theron's mental health issues, but the depiction of him 'struggling to cope' after a breakup might perpetuate the stereotype that all individuals who have experienced breakups struggle with severe mental health issues.",
+    "AI flagged: The script does contain some misinformation or potentially misleading information. The statement that the viewer's concern about Theron 'maybe something was seriously wrong and he was crying out for help' is based on the noise level of Theron's music, which might not be a reliable indicator of his mental state. This might lead some viewers to call emergency services unnecessarily.",
+    "AI flagged: The content of the script is unlikely to be inappropriate for a general audience but does involve the potential disruption to the peace that can result in the escalation of a situation like the one described."
+  ],
+  "flag_count": 3,
+  "passed": false,
+  "manual_review_required": true
+}

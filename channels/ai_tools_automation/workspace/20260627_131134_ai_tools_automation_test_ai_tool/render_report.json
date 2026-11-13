@@ -1,0 +1,16 @@
+{
+  "video_id": "20260627_131134_ai_tools_automation_test_ai_tool",
+  "workspace_folder": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_131134_ai_tools_automation_test_ai_tool",
+  "voice_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_131134_ai_tools_automation_test_ai_tool\\voice.wav",
+  "captions_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_131134_ai_tools_automation_test_ai_tool\\captions.srt",
+  "workspace_final_video_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_131134_ai_tools_automation_test_ai_tool\\final.mp4",
+  "workspace_thumbnail_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\workspace\\20260627_131134_ai_tools_automation_test_ai_tool\\thumbnail.png",
+  "published_final_video_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\output\\final_clips\\20260627_131134_ai_tools_automation_test_ai_tool.mp4",
+  "published_thumbnail_path": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\output\\thumbnails\\20260627_131134_ai_tools_automation_test_ai_tool.png",
+  "duration": 46.800000000000004,
+  "voice_mode": "pyttsx3",
+  "rendered": true,
+  "thumbnail_created": true,
+  "upload_package": "C:\\Users\\user\\Downloads\\8CHANNELS\\8_Channel_Content_Factory\\channels\\ai_tools_automation\\upload_packages\\20260627_131134_ai_tools_automation_test_ai_tool",
+  "status": "needs_review"
+}

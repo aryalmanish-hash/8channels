@@ -1,0 +1,10 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-10T22:46:19.464876",
+  "flags": [
+    "Risk keyword: 'hate'"
+  ],
+  "flag_count": 1,
+  "passed": false,
+  "manual_review_required": true
+}

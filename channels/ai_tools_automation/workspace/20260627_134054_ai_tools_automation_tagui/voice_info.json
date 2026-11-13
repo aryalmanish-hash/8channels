@@ -1,0 +1,7 @@
+{
+  "voice_key": "david",
+  "voice_name": "David",
+  "gender": "male",
+  "rate": 165,
+  "mode": "pyttsx3"
+}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}History - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Post History</h1>
+<p class="muted">{{ history|length }} actions logged</p>
+
+{% if history|length == 0 %}
+<div class="empty">No history yet.</div>
+{% endif %}
+
+<div class="history-list">
+  {% for h in history %}
+  <div class="history-row">
+    <div class="history-time muted">{{ h.time }}</div>
+    <div class="history-platform">
+      <span class="badge">{{ h.platform.replace("_", " ").title() }}</span>
+    </div>
+    <div class="history-video">{{ h.video_id }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

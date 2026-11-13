@@ -1,0 +1,12 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-01T19:06:15.691195",
+  "flags": [
+    "AI flagged: Hate speech or discrimination - The script mentions a list of physical appearance characteristics (too pretty, latest designer clothes and accessories) that could be perceived as judgmental or discriminatory. However, the intention seems to be to express concerns about potential suspicious behavior rather than targeting Rachel's appearance.",
+    "AI flagged: Content inappropriate for general audience - The script suggests a potential scam artist and confronting her about it. Mature themes and potential conflict may not be suitable for all ages.",
+    "AI flagged: Legal risks - The script involves confronting the girlfriend about potential scamming. Confrontation might escalate into a physical or verbal conflict. It's essential to consider the potential risks of involving oneself in such situations, and the script may inadvertently be encouraging viewers to engage in a potentially confrontational behavior."
+  ],
+  "flag_count": 3,
+  "passed": false,
+  "manual_review_required": true
+}

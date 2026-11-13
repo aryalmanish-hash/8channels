@@ -1,0 +1,5 @@
+Final clip:
+channels/quiz/output/final_clips/20260627_042819_quiz_system_test_quiz.mp4
+
+Thumbnail:
+channels/quiz/output/thumbnails/20260627_042819_quiz_system_test_quiz.png

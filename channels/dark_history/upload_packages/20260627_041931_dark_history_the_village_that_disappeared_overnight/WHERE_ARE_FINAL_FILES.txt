@@ -1,0 +1,5 @@
+Final clip:
+channels/dark_history/output/final_clips/20260627_041931_dark_history_the_village_that_disappeared_overnight.mp4
+
+Thumbnail:
+channels/dark_history/output/thumbnails/20260627_041931_dark_history_the_village_that_disappeared_overnight.png

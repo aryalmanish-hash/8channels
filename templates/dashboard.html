@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-label">Channels</div>
+    <div class="stat-value">{{ totals.channels }}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Total Videos</div>
+    <div class="stat-value">{{ totals.videos }}</div>
+  </div>
+  <div class="stat-card warn">
+    <div class="stat-label">Needs Review</div>
+    <div class="stat-value">{{ totals.review }}</div>
+  </div>
+  <div class="stat-card ok">
+    <div class="stat-label">Posted</div>
+    <div class="stat-value">{{ totals.posted }}</div>
+  </div>
+</div>
+
+<h2>Per-Channel</h2>
+<div class="channel-grid">
+  {% for cid, s in stats.items() %}
+  <div class="channel-card" style="border-left: 4px solid {{ s.color }}">
+    <div class="channel-name">{{ s.name }}</div>
+    <div class="channel-id muted">{{ cid }}</div>
+    <div class="channel-stats">
+      <span><strong>{{ s.total }}</strong> total</span>
+      <span class="warn">{{ s.review }} review</span>
+      <span class="ok">{{ s.posted }} posted</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>Recent Activity</h2>
+<div class="recent-list">
+  {% for v in recent %}
+  <div class="recent-row" style="border-left: 3px solid {{ v.color }}">
+    <div class="recent-main">
+      <div class="recent-title">{{ v.title[:80] }}</div>
+      <div class="recent-meta muted">{{ v.channel_id }} - {{ v.created[:19] }}</div>
+    </div>
+    <div class="badge badge-{{ v.status }}">{{ v.status }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Review - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Review Queue</h1>
+<p class="muted">{{ videos|length }} video(s) pending review</p>
+
+{% if videos|length == 0 %}
+<div class="empty">No videos waiting for review.</div>
+{% endif %}
+
+<div class="review-grid">
+  {% for v in videos %}
+  <div class="review-card" style="border-top: 4px solid {{ v.color }}">
+
+    <div class="thumb-wrap">
+      {% if v.thumb_path %}
+      <img src="/file/{{ v.thumb_path }}" alt="thumb" class="thumb">
+      {% else %}
+      <div class="thumb-placeholder">No Thumbnail</div>
+      {% endif %}
+    </div>
+
+    <div class="review-info">
+      <div class="review-channel" style="color: {{ v.color }}">{{ v.channel_id }}</div>
+      <div class="review-title">{{ v.title }}</div>
+      <div class="review-meta muted">{{ v.created[:19] }}</div>
+      <div class="review-id muted small">{{ v.video_id }}</div>
+    </div>
+
+    <div class="review-actions">
+      {% if v.video_path %}
+      <a href="/file/{{ v.video_path }}" target="_blank" class="btn btn-blue">Watch Video</a>
+      {% endif %}
+      <button class="btn btn-grey" onclick="openFolder('{{ v.video_id }}', '{{ v.channel_id }}')">Open Folder</button>
+      <button class="btn btn-green" onclick="approveVideo('{{ v.video_id }}')">Approve</button>
+      <button class="btn btn-red"   onclick="rejectVideo('{{ v.video_id }}')">Reject</button>
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+function approveVideo(videoId) {
+  if (!confirm("Approve this video for upload?")) return;
+  fetch("/api/approve", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({video_id: videoId})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) {
+      toast("Approved!", "ok");
+      setTimeout(() => location.reload(), 800);
+    } else {
+      toast("Error: " + (d.error || "unknown"), "err");
+    }
+  })
+  .catch(e => toast("Network error", "err"));
+}
+
+function rejectVideo(videoId) {
+  if (!confirm("Reject this video? It will be marked rejected.")) return;
+  fetch("/api/reject", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({video_id: videoId})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) {
+      toast("Rejected.", "warn");
+      setTimeout(() => location.reload(), 800);
+    } else {
+      toast("Error: " + (d.error || "unknown"), "err");
+    }
+  });
+}
+
+function openFolder(videoId, channelId) {
+  fetch("/api/open_folder", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({video_id: videoId, channel_id: channelId})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) toast("Opened folder", "ok");
+    else toast("Folder not found", "err");
+  });
+}
+</script>
+{% endblock %}

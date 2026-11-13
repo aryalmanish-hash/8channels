@@ -1,0 +1,13 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-06T17:18:08.223806",
+  "flags": [
+    "AI flagged: Content inappropriate for general audience - The topic of inheritance and potential theft within a relationship may be sensitive and emotional for some viewers, but it is not explicitly inappropriate.",
+    "AI flagged: Legal risks - The script discusses a potentially legal issue of inheritance and theft, which may lead to legal repercussions or accusations, but the context is a personal anecdote rather than a factual claim.",
+    "AI flagged: None related to hate speech or discrimination - The script does not contain any hate speech or discriminatory language.",
+    "AI flagged: None related to misinformation or dangerous claims - The script does not contain any misinformation or dangerous claims."
+  ],
+  "flag_count": 4,
+  "passed": false,
+  "manual_review_required": true
+}

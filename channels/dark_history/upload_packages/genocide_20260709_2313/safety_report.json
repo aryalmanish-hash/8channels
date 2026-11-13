@@ -1,0 +1,10 @@
+{
+  "channel_id": "dark_history",
+  "checked_at": "2026-07-09T23:14:05.495968",
+  "flags": [
+    "Risk keyword: 'kill'"
+  ],
+  "flag_count": 1,
+  "passed": false,
+  "manual_review_required": true
+}

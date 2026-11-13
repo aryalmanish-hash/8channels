@@ -1,0 +1,5 @@
+Final clip:
+channels/ai_tools_automation/output/final_clips/20260627_041931_ai_tools_automation_a_free_ai_tool_that_summarizes_long_pdfs.mp4
+
+Thumbnail:
+channels/ai_tools_automation/output/thumbnails/20260627_041931_ai_tools_automation_a_free_ai_tool_that_summarizes_long_pdfs.png

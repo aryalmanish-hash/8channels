@@ -1,0 +1,5 @@
+Final clip:
+channels/reddit_stories/output/final_clips/assuming_neighbor_s_lost_dog_stray_aita_20260713_2028.mp4
+
+Thumbnail:
+channels/reddit_stories/output/thumbnails/assuming_neighbor_s_lost_dog_stray_aita_20260713_2028.png

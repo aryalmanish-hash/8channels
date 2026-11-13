@@ -1,0 +1,18 @@
+channel_id: facts
+channel_name: "Faceless Facts / Did You Know"
+automation_level: high
+video_types:
+  - science_fact
+  - animal_fact
+  - space_fact
+  - country_fact
+  - weird_fact
+style:
+  voice: clear_narrator
+  layout: fact_visuals_with_captions
+manual_review:
+  required: true
+  checks:
+    - facts_checked
+    - visuals_allowed
+    - no_fake_claims

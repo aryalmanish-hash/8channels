@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Schedule - 8-Channel Factory{% endblock %}
+
+{% block content %}
+<h1>Posting Schedule</h1>
+
+<div class="card-box">
+  <h2>Add Reminder</h2>
+  <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+    <select id="sch-video" class="select-small" style="min-width: 250px;">
+      {% for v in videos %}
+      <option value="{{ v.video_id }}">{{ v.channel_id }} - {{ v.title[:50] }}</option>
+      {% endfor %}
+    </select>
+    <input id="sch-when" type="datetime-local" class="input-small">
+    <input id="sch-note" type="text" placeholder="Note (optional)" class="input-small" style="min-width: 200px;">
+    <button class="btn btn-blue" onclick="addSchedule()">Add</button>
+  </div>
+</div>
+
+<h2>Scheduled</h2>
+{% if schedule|length == 0 %}
+<div class="empty">No reminders set.</div>
+{% endif %}
+
+<div class="schedule-list">
+  {% for s in schedule %}
+  <div class="schedule-row">
+    <div class="schedule-when"><strong>{{ s.when }}</strong></div>
+    <div class="schedule-video muted">{{ s.video_id }}</div>
+    <div class="schedule-note">{{ s.note or "" }}</div>
+    <button class="btn btn-red small-btn" onclick="deleteSchedule({{ loop.index0 }})">Delete</button>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function addSchedule() {
+  const video = document.getElementById("sch-video").value;
+  const when  = document.getElementById("sch-when").value;
+  const note  = document.getElementById("sch-note").value;
+  if (!video || !when) {
+    toast("Pick video and time", "err");
+    return;
+  }
+  fetch("/api/schedule/add", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({video_id: video, when: when, note: note})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) { toast("Added!", "ok"); setTimeout(() => location.reload(), 600); }
+    else toast("Error", "err");
+  });
+}
+
+function deleteSchedule(idx) {
+  if (!confirm("Delete this reminder?")) return;
+  fetch("/api/schedule/delete", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({index: idx})
+  })
+  .then(r => r.json())
+  .then(d => {
+    if (d.ok) { toast("Deleted", "ok"); setTimeout(() => location.reload(), 500); }
+  });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,5 @@
+script_prompt: |
+  Create a short quiz with question, 3 options, countdown, answer, and explanation.
+  The correct answer must be clear and accurate.
+metadata_prompt: |
+  Create title, description, and hashtags for a quiz video.

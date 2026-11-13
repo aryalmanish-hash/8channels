@@ -1,0 +1,10 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-11T22:57:16.463208",
+  "flags": [
+    "Risk keyword: 'bomb'"
+  ],
+  "flag_count": 1,
+  "passed": false,
+  "manual_review_required": true
+}

@@ -1,0 +1,5 @@
+Final clip:
+channels/facts/output/final_clips/20260627_041931_facts_three_science_facts_that_sound_fake.mp4
+
+Thumbnail:
+channels/facts/output/thumbnails/20260627_041931_facts_three_science_facts_that_sound_fake.png

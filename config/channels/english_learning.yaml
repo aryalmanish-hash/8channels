@@ -1,0 +1,20 @@
+channel_id: english_learning
+channel_name: "English Learning"
+automation_level: very_high
+video_types:
+  - dont_say_say_this
+  - grammar_mistake
+  - idiom
+  - phrasal_verb
+  - pronunciation
+  - english_quiz
+style:
+  voice: clear_teacher
+  layout: clean_text_first
+  background: simple_clean
+manual_review:
+  required: true
+  checks:
+    - grammar_correct
+    - examples_correct
+    - pronunciation_clear

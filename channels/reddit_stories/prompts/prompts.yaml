@@ -1,0 +1,7 @@
+script_prompt: |
+  Write a fictional Reddit-style short story. It must be entertainment fiction, not a real Reddit post.
+  Use first person, simple language, strong hook, emotional conflict, and satisfying ending.
+  Avoid real names, private information, graphic content, and minors in sensitive contexts.
+metadata_prompt: |
+  Create title, description, and hashtags for a fictional story video.
+  Make it dramatic but do not claim it is a real post.

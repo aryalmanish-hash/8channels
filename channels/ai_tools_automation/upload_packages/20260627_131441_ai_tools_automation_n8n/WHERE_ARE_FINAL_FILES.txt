@@ -1,0 +1,5 @@
+Final clip:
+channels/ai_tools_automation/output/final_clips/20260627_131441_ai_tools_automation_n8n.mp4
+
+Thumbnail:
+channels/ai_tools_automation/output/thumbnails/20260627_131441_ai_tools_automation_n8n.png

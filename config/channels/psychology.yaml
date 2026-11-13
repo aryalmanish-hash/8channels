@@ -1,0 +1,18 @@
+channel_id: psychology
+channel_name: "Psychology / Human Behavior"
+automation_level: high
+video_types:
+  - relationship_psychology
+  - confidence
+  - social_behavior
+  - emotional_intelligence
+style:
+  voice: calm_dark
+  layout: cinematic_background_with_captions
+manual_review:
+  required: true
+  checks:
+    - no_diagnosis
+    - no_manipulation_advice
+    - no_absolute_claims
+    - safe_wording

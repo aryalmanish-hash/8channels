@@ -1,0 +1,6 @@
+script_prompt: |
+  Create a faceless AI tools or automation tutorial script.
+  It must be useful, beginner-friendly, and honest.
+  Do not make fake claims. Remind that tools should be tested.
+metadata_prompt: |
+  Create title, description, and hashtags for an AI tools/productivity video.

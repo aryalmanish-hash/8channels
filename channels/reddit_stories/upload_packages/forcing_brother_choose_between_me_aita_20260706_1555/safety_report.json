@@ -1,0 +1,12 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-06T15:55:06.208304",
+  "flags": [
+    "Risk keyword: 'hate'",
+    "AI flagged: Content inappropriate for general audience - The script discusses mature themes such as cancer, dementia, and death, which may be disturbing for younger or sensitive audiences.",
+    "AI flagged: Potential legal risks - The script's title and content imply a potentially contentious family situation, and the use of \"AITA\" (Am I The Asshole?) framing may lead to discussions or comments that could be considered defamatory or invasive of privacy."
+  ],
+  "flag_count": 3,
+  "passed": false,
+  "manual_review_required": true
+}

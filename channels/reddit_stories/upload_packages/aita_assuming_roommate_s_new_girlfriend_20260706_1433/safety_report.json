@@ -1,0 +1,12 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-06T14:34:02.776127",
+  "flags": [
+    "AI flagged: Potential discrimination or judgment based on Emily's unemployment status, which could be perceived as shaming or stigmatizing individuals who are struggling to find work.",
+    "AI flagged: The script may perpetuate negative stereotypes about people who are unemployed or living with their partners, which could be considered insensitive or discriminatory.",
+    "AI flagged: The title \"AITA\" (Am I The Asshole?) may imply a judgmental or critical tone, which could lead to discussions that are not respectful or considerate of different perspectives."
+  ],
+  "flag_count": 3,
+  "passed": false,
+  "manual_review_required": true
+}

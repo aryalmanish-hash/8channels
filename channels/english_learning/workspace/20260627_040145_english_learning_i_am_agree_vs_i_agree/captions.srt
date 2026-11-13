@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:02,342
+Don’t say: I am agree.
+
+2
+00:00:02,342 --> 00:00:04,685
+Say: I agree.
+
+3
+00:00:04,685 --> 00:00:07,028
+Wrong: I am agree.
+
+4
+00:00:07,028 --> 00:00:09,371
+Correct: I agree.
+
+5
+00:00:09,371 --> 00:00:11,714
+Quick rule:
+
+6
+00:00:11,714 --> 00:00:14,057
+Agree is a verb, so do not use am before it.
+
+7
+00:00:14,057 --> 00:00:16,399
+Follow for daily English corrections.

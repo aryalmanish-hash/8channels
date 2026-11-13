@@ -1,0 +1,11 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-06-30T04:21:06.913895",
+  "flags": [
+    "AI flagged: Content inappropriate for general audience - The script contains a description of a heated argument and yelling, which may not be suitable for all audiences, especially younger viewers.",
+    "AI flagged: Legal risks - The script mentions taking an antique engagement ring to a pawn shop, which could be considered theft if the ring belongs to the narrator's mother, and this action may have legal consequences."
+  ],
+  "flag_count": 2,
+  "passed": false,
+  "manual_review_required": true
+}

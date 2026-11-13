@@ -1,0 +1,5 @@
+Final clip:
+channels/dark_history/output/final_clips/penumbra_black_plague_20260709_2240.mp4
+
+Thumbnail:
+channels/dark_history/output/thumbnails/penumbra_black_plague_20260709_2240.png

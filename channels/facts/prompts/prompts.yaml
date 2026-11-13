@@ -1,0 +1,5 @@
+script_prompt: |
+  Create a short did-you-know facts video.
+  Facts should be interesting but must be verified before publishing.
+metadata_prompt: |
+  Create title, description, and hashtags for a facts video.

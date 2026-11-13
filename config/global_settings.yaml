@@ -1,0 +1,44 @@
+gemini_api_key: "YOUR_GCP_GEMINI_API_KEY"
+github_token: YOUR_GITHUB_PAT
+groq_api_key: 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
+huggingface_token: YOUR_HUGGINGFACE_TOKEN
+openrouter_api_key: YOUR_OPENROUTER_API_KEY
+paths:
+  assets_root: assets
+  database_path: database/content_factory.sqlite
+  logs_root: logs
+  output_rule: channels/<channel_id>/output
+pexels_api_key: JT1GlkAaxxiR69tbNNtAkF5tPZAaTD3jIcbKRjMdMb5ARsWkClFTWZ7R
+platforms:
+  facebook_reels: true
+  instagram_reels: true
+  linkedin: true
+  tiktok: true
+  x_twitter: true
+  youtube_longform: true
+  youtube_shorts: true
+system:
+  default_fps: 30
+  default_resolution: 1080x1920
+  manual_review_required: true
+  manual_upload: true
+  mode: local_semi_automated
+  name: 8-Channel Content Factory
+  protect_wc_klips: true
+  timezone: Asia/Katmandu
+workflow:
+  statuses:
+  - topic_generated
+  - topic_approved
+  - script_generated
+  - script_approved
+  - voice_generated
+  - captions_generated
+  - rendered
+  - needs_review
+  - approved_for_upload
+  - posted
+  - archived
+  - rejected
+  - needs_edit
+  - failed

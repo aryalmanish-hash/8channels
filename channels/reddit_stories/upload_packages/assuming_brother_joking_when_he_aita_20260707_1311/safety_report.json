@@ -1,0 +1,11 @@
+{
+  "channel_id": "reddit_stories",
+  "checked_at": "2026-07-07T13:11:28.868867",
+  "flags": [
+    "AI flagged: 1. Hate speech or discrimination - Although the script does not explicitly contain hate speech or discriminatory language, it implies and mentions infidelity, which can be a sensitive topic and may lead to negative stereotypes or stigmatization against individuals or groups.",
+    "AI flagged: 3. Content inappropriate for general audience - The script mentions infidelity, which may not be suitable for younger or more sensitive viewers."
+  ],
+  "flag_count": 2,
+  "passed": false,
+  "manual_review_required": true
+}

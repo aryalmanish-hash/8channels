@@ -1,0 +1,22 @@
+channel_id: reddit_stories
+channel_name: "Fictional Reddit-Style Stories"
+automation_level: very_high
+primary_formats:
+  - short_form
+video_types:
+  - betrayal_story
+  - karma_story
+  - workplace_revenge
+  - family_drama
+style:
+  voice: emotional_storyteller
+  layout: split_screen_or_full_background
+  background: gameplay_or_satisfying
+manual_review:
+  required: true
+  checks:
+    - fictional_story
+    - no_real_names
+    - no_private_information
+    - strong_hook
+    - satisfying_ending

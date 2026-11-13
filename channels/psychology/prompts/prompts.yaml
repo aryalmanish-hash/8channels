@@ -1,0 +1,6 @@
+script_prompt: |
+  Create a careful educational human behavior short.
+  Use safe wording: can sometimes mean, may be a sign, one possible reason.
+  Avoid diagnosis, manipulation advice, and absolute claims.
+metadata_prompt: |
+  Create title, description, and hashtags for a psychology/human behavior video.

@@ -1,0 +1,7 @@
+Manual upload checklist
+
+[ ] Review video
+[ ] Check title
+[ ] Check hashtags
+[ ] Upload manually
+[ ] Mark posted in dashboard
